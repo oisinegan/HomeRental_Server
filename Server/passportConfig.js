@@ -1,6 +1,6 @@
 const bycrpt = require("bcrypt");
 const passportLocal = require("passport-local").Strategy;
-const connection = require("./config/dbConfig");
+const connection = require("./config/dbConfig").default;
 
 module.exports = function (passport) {
   passport.use(

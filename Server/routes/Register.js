@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const connection = require("../config/dbConfig");
+const connection = require("../config/dbConfig").default;
 const bycrpt = require("bcrypt");
 
 router.post("/", (req, res) => {
