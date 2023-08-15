@@ -1,4 +1,4 @@
-import { createConnection } from "mysql2";
-const connection = createConnection(process.env.DATABASE_URL);
+const mysql = require("mysql2");
+const connection = mysql.createConnection(process.env.DATABASE_URL);
 
-export default connection;
+module.exports = connection;

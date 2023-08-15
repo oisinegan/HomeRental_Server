@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const connection = require("../config/dbConfig").default;
+const connection = require("../config/dbConfig");
 
 router.post("/", (req, res) => {
   connection.connect();
