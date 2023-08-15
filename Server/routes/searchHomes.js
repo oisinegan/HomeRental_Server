@@ -3,7 +3,6 @@ const router = express.Router();
 const connection = require("../config/dbConfig");
 
 router.post("/", (req, res) => {
-  console.log(connection);
   connection.connect();
   let info = req.body;
   const sql =
