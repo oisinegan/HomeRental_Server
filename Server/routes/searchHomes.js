@@ -6,7 +6,7 @@ router.post("/", (req, res) => {
   connection.connect();
   let info = req.body;
   const sql =
-    "SELECT Home.*, Urls.*, Landlord.Name FROM Home INNER JOIN URLs ON Home.idHome = Urls.idHome INNER JOIN landlord ON Home.idLandlord = Landlord.idLandlord WHERE Address LIKE '" +
+    "SELECT Home.*, Urls.*, Landlord.Name FROM Home INNER JOIN Urls ON Home.idHome = Urls.idHome INNER JOIN Landlord ON Home.idLandlord = Landlord.idLandlord WHERE Address LIKE '" +
     info.search +
     "%' OR City LIKE '" +
     info.search +

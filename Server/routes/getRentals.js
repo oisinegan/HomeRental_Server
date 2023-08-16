@@ -8,7 +8,7 @@ router.post("/", (req, res) => {
   let info = req.body;
 
   const sql =
-    "SELECT Home.*, Urls.*, Landlord.Name FROM Home INNER JOIN URLs ON Home.idHome = Urls.idHome INNER JOIN landlord ON Home.idLandlord = Landlord.idLandlord WHERE Home.idLandlord =" +
+    "SELECT Home.*, Urls.*, Landlord.Name FROM Home INNER JOIN Urls ON Home.idHome = Urls.idHome INNER JOIN Landlord ON Home.idLandlord = Landlord.idLandlord WHERE Home.idLandlord =" +
     info.id;
 
   connection.query(sql, (err, rows, fields) => {

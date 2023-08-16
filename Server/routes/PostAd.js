@@ -7,7 +7,7 @@ router.post("/", async (req, res) => {
 
   try {
     const insertHomeQuery = `
-      INSERT INTO HomeRental.Home (
+      INSERT INTO Home (
         Type, Address, City, County, Price, Bedrooms, Bathrooms,
         idLandlord, DatePosted, Folder, Description
       )
@@ -33,7 +33,7 @@ router.post("/", async (req, res) => {
     const homeId = result[0].insertId;
 
     const insertUrlsQuery = `
-      INSERT INTO HomeRental.Urls (idHome, Url) VALUES ?
+      INSERT INTO Urls (idHome, Url) VALUES ?
     `;
 
     const urlValues = info.urls.map((url) => [homeId, url]);
