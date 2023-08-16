@@ -28,6 +28,7 @@ module.exports = function (passport) {
   });
 
   passport.deserializeUser((id, done) => {
+    console.log("DESERIALIZING");
     const sql = "SELECT * FROM Landlord WHERE idLandlord = '" + id + "'";
     connection.query(sql, (err, rows, fields) => {
       if (err) {
