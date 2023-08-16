@@ -23,6 +23,7 @@ module.exports = function (passport) {
   );
 
   passport.serializeUser((user, cb) => {
+    console.log("SERIALIZE USER (PP config): " + user.idLandlord);
     cb(null, user.idLandlord);
   });
 
