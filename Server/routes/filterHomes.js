@@ -40,7 +40,7 @@ router.post("/", (req, res) => {
   validateQuery(info);
 
   const sql =
-    "SELECT Home.*, Urls.*, Landlord.Name FROM Home INNER JOIN Urls ON Home.idHome = Urls.idHome INNER JOIN landlord ON Home.idLandlord = Landlord.idLandlord WHERE Price BETWEEN " +
+    "SELECT Home.*, Urls.*, Landlord.Name FROM Home INNER JOIN Urls ON Home.idHome = Urls.idHome INNER JOIN Landlord ON Home.idLandlord = Landlord.idLandlord WHERE Price BETWEEN " +
     info.MinPrice +
     " AND " +
     info.MaxPrice +
