@@ -13,8 +13,8 @@ router.post("/", (req, res, next) => {
     else {
       req.logIn(user, (err) => {
         if (err) throw err;
+        console.log("LOGIN: " + user);
         res.send('"SUCESS"');
-     
       });
     }
   })(req, res, next);

@@ -35,6 +35,10 @@ module.exports = function (passport) {
         Name: rows[0].Name,
         email: rows[0].username,
       };
+      console.log("ID(PP config): " + rows[0].idLandlord);
+      console.log("Name(PP config): " + rows[0].Name);
+      console.log("email(PP config): " + rows[0].username);
+      console.log("USER INFO(PP config): " + userInfo);
       done(null, userInfo);
     });
   });
