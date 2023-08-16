@@ -3,6 +3,7 @@ const router = express.Router();
 const connection = require("../config/dbConfig");
 
 router.get("/", (req, res) => {
+  console.log("GETTING ALL HOMES");
   connection.connect();
 
   connection.query(
