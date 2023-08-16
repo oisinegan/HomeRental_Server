@@ -14,7 +14,12 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(
   cors({
-    origin: ["https://home-rental-client.vercel.app", "http://localhost:3000"],
+    origin: [
+      "https://home-rental-client.vercel.app",
+      "https://home-rental-client-git-main-oisinegan.vercel.app",
+      "https://home-rental-client-4wx9jzbei-oisinegan.vercel.app",
+      "http://localhost:3000",
+    ],
     credentials: true,
   })
 );
